@@ -21,4 +21,8 @@ console.log(objectA.c);
 console.log(copyOfA.c);
 
 //Динамическая типизация
+let a = 'abc';
+console.log(a);
+a =1;
+console.log(a);
 
