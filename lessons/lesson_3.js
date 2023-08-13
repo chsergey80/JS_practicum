@@ -19,3 +19,6 @@ const copyOfA = objectA
 copyOfA.c = 'abc';
 console.log(objectA.c);
 console.log(copyOfA.c);
+
+//Динамическая типизация
+
