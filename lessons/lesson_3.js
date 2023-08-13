@@ -9,3 +9,13 @@ console.log(myName_1);
 
 let id1 = Symbol('id');
 console.log(id1);
+
+//ссылочный тип данных
+const objectA = {
+  a: 10,
+  b: true
+}
+const copyOfA = objectA
+copyOfA.c = 'abc';
+console.log(objectA.c);
+console.log(copyOfA.c);
