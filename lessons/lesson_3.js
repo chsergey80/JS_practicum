@@ -7,3 +7,5 @@ const myName_1 = 'Natalja';
 //myName_1 = 1;   not work
 console.log(myName_1);
 
+let id1 = Symbol('id');
+console.log(id1);
