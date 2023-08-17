@@ -9,7 +9,7 @@ delete myCity.country   //удаление свойства
 myCity['popular'] = true;   //Добавляем свойство
 const countryPropertyName = 'country';  // вводим переменную, которая будет новым или имеющимся свойством
 myCity[countryPropertyName] = 'Russia';  // задаем значение этому свойству
-
-
 console.log(myCity);
+
+// Вложенные свойства
 
