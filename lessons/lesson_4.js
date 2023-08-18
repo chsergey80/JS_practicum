@@ -34,4 +34,9 @@ const userProfile = {
 }
 console.log(userProfile);
 
+// Глобальные объекты
+console.log('Hello'); // или аналог window.console.log('Hello');
+//global.console.log('Hello'); // это работает в Node.js
+
+// Методы объектов
 
