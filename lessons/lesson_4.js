@@ -24,3 +24,14 @@ console.log(myCityNew.info.isPopular);
 delete myCityNew.info['isPopular'];
 console.log(myCityNew);
 
+// Использование переменных при формировании объекта
+const name = 'Bogdan';
+const postsQty = 23;
+const userProfile = {
+  name,
+  postsQty,
+  hasSignedAgreement: false,
+}
+console.log(userProfile);
+
+
