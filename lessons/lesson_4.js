@@ -39,4 +39,10 @@ console.log('Hello'); // или аналог window.console.log('Hello');
 //global.console.log('Hello'); // это работает в Node.js
 
 // Методы объектов
-
+const myCity_1 = {
+  city: 'New York',
+  cityGreeting() {
+    console.log('Greeting!!')
+  }
+}
+myCity_1.cityGreeting()
