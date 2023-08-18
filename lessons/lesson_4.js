@@ -12,5 +12,15 @@ myCity[countryPropertyName] = 'Russia';  // задаем значение это
 console.log(myCity);
 
 // Вложенные свойства
-
+const myCityNew = {
+  city: 'Ney York',
+  population: 8000000,
+  info: {
+    isPopular: true,
+    country: 'USA',
+  }
+}
+console.log(myCityNew.info.isPopular);
+delete myCityNew.info['isPopular'];
+console.log(myCityNew);
 
