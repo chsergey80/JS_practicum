@@ -46,3 +46,12 @@ const myCity_1 = {
   }
 }
 myCity_1.cityGreeting()
+
+//JSON нотации
+ const post = {
+  title: 'My post',
+  likesQty: 5,
+ }
+ console.log(post);  //Выводим объект как есть
+ console.log(JSON.stringify(post));  // преобразуем объект в строку
+ console.log(JSON.parse(JSON.stringify(post)));   // преобразуем строку в объект
