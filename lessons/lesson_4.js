@@ -55,3 +55,29 @@ myCity_1.cityGreeting()
  console.log(post);  //Выводим объект как есть
  console.log(JSON.stringify(post));  // преобразуем объект в строку
  console.log(JSON.parse(JSON.stringify(post)));   // преобразуем строку в объект
+
+//Контекст this
+function makeUser() {
+  return {
+    name: 'John',
+    ref: this,
+  };
+}
+let user = makeUser();
+alert(user.ref.name);
+//    Это потому, что правила, которые определяют значение this, никак не смотрят на объявление объекта. Важен лишь момент вызова.
+//    Здесь значение this внутри makeUser() равно undefined, потому что оно вызывается как функция, а не через «точечный» синтаксис как метод.
+//    Значение this одно для всей функции, блоки кода и объектные литералы на него не влияют.
+//    Таким образом, ref: this фактически принимает текущее this функции makeUser().
+// Вот противоположный случай:
+function makeUser1() {
+  return {
+    name: 'Smith',
+    ref() {
+      return this;
+    }
+  }
+}
+let user1 = makeUser1();
+console.log(user1.ref().name);  // Теперь это работает, поскольку user1.ref() – это метод. И значением this становится объект перед точкой .
+
