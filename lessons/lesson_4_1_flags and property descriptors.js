@@ -14,7 +14,7 @@ Object.defineProperty(user1, "name", {
 let descriptor1 = Object.getOwnPropertyDescriptor(user1, 'name');
 console.log( JSON.stringify(descriptor1, null, 2 ) );
 
-//Сделаем свойство user.name доступным только для чтения. Для этого изменим флаг writable
+//Сделаем свойство user3.name доступным только для чтения. Для этого изменим флаг writable
 let user3 = {
   name: "John"
 };
@@ -23,4 +23,12 @@ Object.defineProperty(user3, "name", {
 });
 user.name = "Pete";  // Ошибка: Невозможно изменить доступное только для чтения свойство 'name'
 
+//Неперечислимое свойство, 
+let user4 = {
+  name: "John",
+  toString() {
+    return this.name4;
+  }
+};
+for (let key in user4) console.log(key); // name, toString
 
