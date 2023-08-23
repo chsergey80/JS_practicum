@@ -36,3 +36,9 @@ Object.defineProperty(user4, "toString", {
   enumerable: false
 });
 for (let key in user4) console.log(key); // Теперь наше свойство toString пропало из цикла:
+
+//Неконфигурируемое свойство
+let descriptor2 = Object.getOwnPropertyDescriptor(Math, 'PI');
+console.log( JSON.stringify(descriptor2, null, 2 ) );
+Math.PI = 3; // Ошибка, потому что writable: false
+Object.defineProperty(Math, "PI", { writable: true }); // Ошибка, из-за configurable: false
