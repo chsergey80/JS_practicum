@@ -32,3 +32,7 @@ let user4 = {
 };
 for (let key in user4) console.log(key); // name, toString
 
+Object.defineProperty(user4, "toString", {
+  enumerable: false
+});
+for (let key in user4) console.log(key); // Теперь наше свойство toString пропало из цикла:
