@@ -44,4 +44,3 @@ Math.PI = 3; // Ошибка, потому что writable: false
 //Object.defineProperty(Math, "PI", { writable: true }); // Ошибка, из-за configurable: false
 
 //Метод Object.defineProperties
-
