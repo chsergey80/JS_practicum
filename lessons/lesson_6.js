@@ -6,3 +6,4 @@ function myFn(a, b) {
   return c
 }
 console.dir(myFn);
+
